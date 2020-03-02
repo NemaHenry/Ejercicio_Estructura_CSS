@@ -3,11 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Estructura CSS</title>
-<link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            background: orange;
+            margin: 0;
+            padding:0;
+            margin-bottom: 100px;
+            font-family: 'Montserrat';
+        }
+        header,section,nav,article,footer{
+            padding:15px;
+            margin: 15px;
+        }
+            header{
+            background: darkred;
+            text-align: center;
+            color: white;
+        }
+        section{
+            background: white;
+            position: relative;
+        }
+        nav {
+            background: white;
+            position: absolute;
+            left: 0px;
+            width: 200px;
+        }
+        article{
+            background: orange;
+            margin-left: 220px;
+        }
+        footer{
+           text-align: center;
+            background-color: darkred;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 70px;
+            width: 100%;
+            margin: 0;
+        }
+        h2{
+            color: darkred;
+        }
+    </style>
 </head>
 <body>
     <header> 
-    <h1>Estructura con Posición Absoluto</h1>
+    <h1>Estructura con Posición Absolouta</h1>
     </header>
     <section>
         <nav>
