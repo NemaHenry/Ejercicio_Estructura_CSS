@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Layout con Float</title>
+	<title>Layout con Inline-Block</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <style>
@@ -49,20 +49,17 @@
         h2{
             color: darkred;
         }
-        .clearfix{
-            overflow: auto;
-        }
-        .after-box{
-            clear: both;
-        }
+        
         @media screen and (min-width:768px) {
                 /* aqui inician los estilos de tablet*/
                 nav {
-                    float: left;
+                    display: inline-block;
+                    vertical-align: top;
                     width: 30%;
             }
                 .container{
-                    float: left;
+                    display: inline-block;
+                    vertical-align: top;
                     width: 65%;
                 /* aqui terminan los estilos de tablet*/
         }
@@ -82,9 +79,9 @@
 </head>
 <body>
     <header> 
-    <h1>Layout con Float</h1>
+    <h1>Layout con Inline-Block</h1>
     </header>
-    <section class="clearfix">
+    <section>
         <nav>
             <ul>
             <li>Inicio</li>
@@ -108,7 +105,7 @@
         </article>
     </div>
     </section>
-        <footer class="after-box">
+        <footer>
              © 2020 Todos los derechos reservados
         </footer>
 </body>
