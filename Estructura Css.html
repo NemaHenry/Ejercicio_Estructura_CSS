@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Layout con Inline-Block</title>
+	<title>Layout con Flexbox</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <style>
@@ -27,6 +27,7 @@
         }
         section{
             background: white;
+            
         }
         nav {
             background: darkred;
@@ -52,23 +53,23 @@
         
         @media screen and (min-width:768px) {
                 /* aqui inician los estilos de tablet*/
+                section {
+                display: flex;
+            }
                 nav {
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 30%;
+                    width: 200px;
+                    min-width: 100px
             }
                 .container{
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 65%;
+                    flex: 1
                 /* aqui terminan los estilos de tablet*/
         }
         
         @media screen and (min-width:1024px) {
                 /* aqui inician los estilos de tablet*/
-                .container{
-                    width: 66%;
-                }
+            nav{
+                width: 300px;
+            }
             h1{
                 transition: all 1s ease-in-out;
                 font-size: 48px;
@@ -79,7 +80,7 @@
 </head>
 <body>
     <header> 
-    <h1>Layout con Inline-Block</h1>
+    <h1>Layout con Flexbox</h1>
     </header>
     <section>
         <nav>
