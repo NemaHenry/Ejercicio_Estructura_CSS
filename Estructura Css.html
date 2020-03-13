@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Layout con Flexbox</title>
+	<title>Layout con Flexbox Grid</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="flexboxgrid.css">
+
     <style>
         *{
             box-sizing:border-box;
@@ -15,15 +17,12 @@
             padding:0;
             font-family: 'Montserrat';
         }
-        header,section,nav,article,footer{
-            padding:15px;
-            margin: 15px;
-            display: block;
-        }
+
             header{
             background: darkred;
             text-align: center;
             color: white;
+            padding: 2em 0;
         }
         section{
             background: white;
@@ -33,43 +32,29 @@
             background: darkred;
             color: white;
         }
-        .container{
-            display: block;
-        }
+       
         article{
             background: orange;
+            padding: 1em;
+            margin: 1em;
         }
         footer{
            text-align: center;
             background-color: darkred;
             color: white;
             height: 70px;
-            width: 100%;
-            margin: 0;
+            padding:1.5em 0;
+        }
+        .row{
+            margin-right: 0;
+            margin-left: 0;
         }
         h2{
             color: darkred;
         }
         
-        @media screen and (min-width:768px) {
-                /* aqui inician los estilos de tablet*/
-                section {
-                display: flex;
-            }
-                nav {
-                    width: 200px;
-                    min-width: 100px
-            }
-                .container{
-                    flex: 1
-                /* aqui terminan los estilos de tablet*/
-        }
-        
         @media screen and (min-width:1024px) {
                 /* aqui inician los estilos de tablet*/
-            nav{
-                width: 300px;
-            }
             h1{
                 transition: all 1s ease-in-out;
                 font-size: 48px;
@@ -80,27 +65,27 @@
 </head>
 <body>
     <header> 
-    <h1>Layout con Flexbox</h1>
+    <h1>Layout con Flexbox Grid</h1>
     </header>
-    <section>
-        <nav>
-            <ul>
+    <section class="row">
+        <nav class="col-xs-12 col-sm-4 col-md-3">
+            <ul class="box">
             <li>Inicio</li>
             <li>Nosotros</li>
             <li>Servicios</li>
             <li>Contacto</li>
             </ul>
         </nav>
-    <div class="container">
-        <article>
+    <div class="col-xs-12 col-sm-8 col-md-9">
+        <article class="box">
             <h2>Artículo 1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus mauris leo, a aliquet lorem feugiat a. Nulla varius consequat enim, a laoreet sem feugiat vitae. Nulla ut justo vitae libero condimentum feugiat. Curabitur volutpat risus nisi, eget faucibus quam cursus eget. Mauris scelerisque semper mauris, dapibus tristique massa eleifend id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor odio egestas, pharetra dolor sed, feugiat ex. Duis viverra commodo nisi nec sodales. Nullam accumsan imperdiet diam, vel commodo arcu egestas varius. Morbi ipsum metus, auctor vel tellus vitae, venenatis sagittis felis. Cras eu ultricies leo. Sed tempor eros ut velit tincidunt, in volutpat neque aliquam. Nullam sapien nisl, pretium vel velit sit amet, auctor condimentum urna.</p>
         </article>
-        <article>
+        <article class="box">
             <h2>Artículo 2</h2>
                 <p>In turpis arcu, tincidunt sit amet lacus et, congue sollicitudin nibh. Maecenas quis metus nibh. Aenean finibus risus sed vulputate blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed et pulvinar ex. Integer sit amet venenatis diam. Integer rutrum urna sed ante dapibus finibus. Integer varius eu sapien ac placerat. Duis sed tincidunt nisl. Sed vel libero ipsum. Maecenas ut velit justo. Vivamus dui lorem, feugiat nec suscipit a, tincidunt quis elit. Fusce volutpat pretium turpis et condimentum.</p>
         </article>
-        <article>
+        <article class="box">
             <h2>Artículo 3</h2>
                 <p>Integer mauris diam, imperdiet vitae dapibus ac, iaculis egestas sem. Nam dolor eros, sagittis quis metus et, condimentum convallis nulla. Vivamus volutpat felis vehicula placerat pellentesque. Ut sit amet ante sollicitudin, accumsan est quis, rutrum nisi. Duis imperdiet consectetur magna. Nunc tempus sagittis tincidunt. Nunc bibendum sapien vitae lobortis mollis. Donec sed ante mi. Donec hendrerit dictum erat, consequat varius purus accumsan quis. Vestibulum vel nisl urna. Sed eu gravida quam.</p>
         </article>
